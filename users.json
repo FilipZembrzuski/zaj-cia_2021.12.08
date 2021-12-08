@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"Dawid mika",
+        "email":"cośtam@gmail.com"
+    },
+    {
+        "id":2,
+        "name":"Filip Zembrzsuki",
+        "email":"fzembrzuski@gmail.com"
+    },
+    {
+        "id":3,
+        "name":"Dawid Nikiel",
+        "email":"Dawidowski@gmail.com"
+    },
+    {
+        "id":4,
+        "name":"Łukasz Serafin",
+        "email":"ser_afin@gmail.com"
+    }
+]

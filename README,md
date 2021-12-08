@@ -1,0 +1,1 @@
+Zajęcia z obiektu XLHttpReguest

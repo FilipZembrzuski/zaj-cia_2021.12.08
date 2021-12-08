@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX - Ćwiczenia - pobieranie z pliku user.json</title>
+</head>
+<body>
+    <button id='przycisk'>Ładuj user.json</button>
+    <h1>User</h1>
+    <div id="users"></div>
+    <script type="text/javascript">
+            document.getElementById("przycisk").addEventListener("click",ladujużytkownikow)
+            function ladujużytkownikow(){
+                var XHR = new XMLHttpRequest();
+                XHR.open('GET','users.json',true);
+
+                XHR.onload = function(){
+                    if(this.status == 200){
+                        var users = JSON.parse(this.responseText);
+                        var output ='';
+                        for(let i in users){
+                            output +=`   
+                            <ul>
+                                <li>ID: ${users[i].id}</id>
+                                <li>Name: ${users[i].name}</id>
+                                <li>E-mail: ${users[i].email}</id>
+                            </ul>
+                            `;
+                        }
+                        document.getElementById("users").innerHTML = output;
+                    }
+                }
+                XHR.send();
+            }
+    </script>
+</body>
+</html>
