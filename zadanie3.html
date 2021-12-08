@@ -7,7 +7,7 @@
     <title>AJAX</title>
 </head>
 <body>
-    <form id="mojformularz" method="get">
+    <form id="mojformularz" method="GET">
         STAN: <input name="stan" type="number" id="mojstan">
         <input type="submit" value="SPRAWDZ">
     </form>
@@ -20,6 +20,10 @@
             var nazwa = document.getElementById("mojstan").value;
             var xhr = new XMLHttpRequest();
             xhr.open('GET','sprawdz.php?stan='+nazwa,true)
+            xhr.onload = function(){
+                console.log(this.responseText);
+            }
+            xhr.send();
         }
     </script>
 </body>
